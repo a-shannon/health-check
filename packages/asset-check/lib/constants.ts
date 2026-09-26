@@ -3,6 +3,7 @@ export const CARDANO_NATIVE_ASSET = 'ada';
 export const BITCOIN_NATIVE_ASSET = 'btc';
 export const DOGE_NATIVE_ASSET = 'doge';
 export const FIRO_NATIVE_ASSET = 'firo';
+export const ZCASH_NATIVE_ASSET = 'zec';
 export const ETHEREUM_NATIVE_ASSET = 'eth';
 export const HANDSHAKE_NATIVE_ASSET = 'hns';
 export const MAINNET = 'mainnet';
