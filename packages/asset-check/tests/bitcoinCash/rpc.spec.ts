@@ -19,8 +19,7 @@ describe('BitcoinCashRpcAssetHealthCheckParam', () => {
 
   describe('constructor', () => {
     /**
-     * @target BitcoinCashRpcAssetHealthCheckParam.constructor preserves the BCH
-     * asset identity and cannot report health before a balance lookup
+     * @target BitcoinCashRpcAssetHealthCheckParam.constructor preserves the BCH asset identity and starts with an unknown balance
      * @dependencies
      * - mocked BCHN adapter
      * @scenario
@@ -44,8 +43,7 @@ describe('BitcoinCashRpcAssetHealthCheckParam', () => {
     });
 
     /**
-     * @target BitcoinCashRpcAssetHealthCheckParam.constructor rejects malformed
-     * threshold policies
+     * @target BitcoinCashRpcAssetHealthCheckParam.constructor rejects malformed threshold policy %#
      * @dependencies
      * - mocked BCHN adapter
      * @scenario
@@ -75,8 +73,7 @@ describe('BitcoinCashRpcAssetHealthCheckParam', () => {
 
   describe('update', () => {
     /**
-     * @target BitcoinCashRpcAssetHealthCheckParam.update compares native satoshis
-     * exactly at warning and critical boundaries
+     * @target BitcoinCashRpcAssetHealthCheckParam.update compares %s native satoshis exactly
      * @dependencies
      * - mocked BCHN adapter
      * - HealthCheck status and history consumer
@@ -123,8 +120,7 @@ describe('BitcoinCashRpcAssetHealthCheckParam', () => {
     });
 
     /**
-     * @target BitcoinCashRpcAssetHealthCheckParam.update permits equality at
-     * identical nonnegative thresholds
+     * @target BitcoinCashRpcAssetHealthCheckParam.update accepts equality at identical %s thresholds
      * @dependencies
      * - mocked BCHN adapter
      * @scenario
@@ -150,8 +146,7 @@ describe('BitcoinCashRpcAssetHealthCheckParam', () => {
     );
 
     /**
-     * @target BitcoinCashRpcAssetHealthCheckParam.update invalidates a previously
-     * healthy balance on malformed native assets
+     * @target BitcoinCashRpcAssetHealthCheckParam.update invalidates healthy state on malformed assets %#
      * @dependencies
      * - mocked BCHN adapter
      * @scenario
@@ -196,8 +191,7 @@ describe('BitcoinCashRpcAssetHealthCheckParam', () => {
     });
 
     /**
-     * @target BitcoinCashRpcAssetHealthCheckParam.update hides endpoint error
-     * contents, records unavailable health and recovers on a later valid lookup
+     * @target BitcoinCashRpcAssetHealthCheckParam.update sanitizes adapter error form %# and recovers
      * @dependencies
      * - mocked BCHN adapter
      * - HealthCheck status consumer
