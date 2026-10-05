@@ -5,4 +5,5 @@ export const DOGE_NATIVE_ASSET = 'doge';
 export const FIRO_NATIVE_ASSET = 'firo';
 export const ETHEREUM_NATIVE_ASSET = 'eth';
 export const HANDSHAKE_NATIVE_ASSET = 'hns';
+export const SOLANA_NATIVE_ASSET = 'sol';
 export const MAINNET = 'mainnet';

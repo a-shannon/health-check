@@ -5,3 +5,4 @@ export * from './evm';
 export * from './doge';
 export * from './firo';
 export * from './handshake';
+export * from './solana';
